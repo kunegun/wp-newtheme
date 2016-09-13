@@ -159,7 +159,7 @@ input:focus {
   width: 66.6%;
 }
 .grid1-3 {
-  width: 33.3;
+  width: 33.3%;
 }
 .grid2-4 {
   width: 50%;
@@ -285,6 +285,23 @@ h1 {
 h1 span {
   padding: 0 25px;
   background-color: #fff;
+}
+.imagen-destacada {
+  position: relative;
+}
+.imagen-destacada .mas-info {
+  position: absolute;
+  top: 10px;
+  right: -19px;
+}
+.info-ruta {
+  background-color: #323232;
+  height: 60px;
+  padding: 10px;
+}
+.info-ruta a {
+  color: #fff;
+  font-size: 2rem;
 }
 /*------------------------------------*    IMAGES
 \*------------------------------------*/

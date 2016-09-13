@@ -28,24 +28,29 @@
 				'post_type' => 'rutas',
 				'post_per_page' => 3,
 				'order' => 'DESC',
-				'orderby' => 'date'
+				'orderby' => 'name'
 			); ?>
 
 			<?php $tours = new WP_Query($args); ?>
 			<?php while($tours->have_posts() ): $tours->the_post(); ?>
-				<article id="post-<?php the_ID();?>" <?php post_class('grid2-4'); ?>>
+				<article id="post-<?php the_ID();?>" <?php post_class('grid1-3'); ?>>
 					<div class="imagen-destacada">
 						<?php the_post_thumbnail('rutaDestacada'); ?>
 						<a href="<?php the_permalink(); ?>" class="mas-info">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/masinfo.png" alt="">
 						</a>
 					</div>
-
-					<a href="<?php the_permalink(); ?>">
-						<h2><?php the_title(); ?></h2>
-					</a>
+					<div class="info-ruta">
+						<a href="<?php the_permalink(); ?>">
+							<?php the_title(); ?>
+						</a>
+					</div>
+					<div class="clear"></div>
 				</article>
 			<?php endwhile; wp_reset_postdata(); ?>
+
+
+
 		</section>
 
 <?php get_footer(); ?>
