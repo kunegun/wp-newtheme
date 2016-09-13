@@ -1,0 +1,424 @@
+/*
+	Theme Name: MTB
+	Theme URI:
+	Description: Plantilla para el club MTB
+	Version: 1.0
+	Author: Gonzalo Ribera (@kune_)
+	Author URI: http://kune.es
+	Tags:  HTML5, CSS3, bike, mtb, club
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+@import "kouto-swiss"
+//normalize()
+@import "_vars.styl"
+@import "_helpers.styl"
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+/* global box-sizing */
+*,
+*:after,
+*:before {
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+/* html element 62.5% font-size for REM use */
+html {
+	font-size:62.5%;
+}
+body {
+	font:300 14px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color:#444;
+}
+/* clear */
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+
+.clear:after {
+    clear:both;
+}
+.clear {
+    *zoom:1;
+}
+img {
+	max-width:100%;
+	vertical-align:bottom;
+}
+a {
+	color:#444;
+	text-decoration:none;
+}
+a:hover {
+	color:#444;
+}
+a:focus {
+	outline:0;
+}
+a:hover,
+a:active {
+	outline:0;
+}
+input:focus {
+	outline:0;
+	border:1px solid #04A4CC;
+}
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+[class*='grid']
+	float left
+	position relative
+	padding 10px
+
+.grid2-3
+	width 66.6%
+.grid1-3
+	width 33.3
+.grid2-4
+	width 50%
+
+/* wrapper */
+.wrapper {
+	max-width:1100px;
+	width:95%;
+	margin:0 auto;
+	position:relative;
+}
+/* header */
+.header {
+	position: relative;
+}
+.navegacion {
+	background-color: rgba(0,0,0,.7);
+	height: 103px;
+	margin-top: 15px;
+	position: relative;
+	z-index: 1;
+}
+
+.imagenFondo {
+	height: 300px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-size: cover;
+}
+/* logo */
+.logo {
+	width: 150px;
+	float: left;
+}
+.logo-img {
+	width 100%
+}
+/* nav */
+.nav {
+	width: 640px;
+	float: right;
+}
+.nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	height: 103px;
+}
+
+.nav ul li {
+	float: left;
+	padding: 0 15px;
+	height: 100%;
+	line-height: 103px;
+}
+.nav ul li.current_page_item {
+	background-color: #df7900;
+}
+.nav ul li a {
+	font-size:14px;
+	font-weight: bold;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+/* Contenido */
+main {
+	margin-top: 250px;
+}
+
+/* sidebar */
+.sidebar {
+
+}
+/* footer */
+.footer {
+	background-color: #323232;
+	border-top: 6px solid #df7900;
+	padding: 20px 0;
+	color: #ffffff;
+}
+
+.footer .widgets .columna3 {
+	float: left;
+	width: 25%;
+}
+.footer p.copyright {
+	text-align: center;
+}
+
+
+/*------------------------------------*\
+    PAGES
+\*------------------------------------*/
+/** PRINCIPAL */
+
+section.slider {
+	margin-top: -100px;
+}
+ul.slider {
+	margin:0;
+	padding:0;
+}
+.bx-wrapper .bx-controls-direction a {
+  width: 44px;
+  height: 84px;
+}
+.bx-wrapper, .bx-viewport {
+	left: 0;
+	box-shadow: none;
+	border: none;
+}
+
+.bx-wrapper .bx-prev,
+.bx-wrapper .bx-prev:hover{
+	background-position: 0 10px;
+	left: 30px;
+}
+
+.bx-wrapper .bx-next,
+.bx-wrapper .bx-next:hover {
+	right: 30px;
+	background-position: -43px 10px;
+}
+
+h1 {
+	color: #d4771e;
+	font-size: 34px;
+	text-align: center;
+	background-image: url(img/tituloBG.png);
+	background-repeat: repeat-x;
+	background-position: center center;
+	font-weight: normal;
+}
+h1 span {
+	padding: 0 25px;
+	background-color: #ffffff;
+}
+
+/*------------------------------------*\
+    IMAGES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+
+@font-face {
+	font-family:'Font-Name';
+	src:url('fonts/font-name.eot');
+	src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
+		url('fonts/font-name.woff') format('woff'),
+		url('fonts/font-name.ttf') format('truetype'),
+		url('fonts/font-name.svg#font-name') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+@media only screen and (min-width:320px) {
+
+}
+@media only screen and (min-width:480px) {
+
+}
+@media only screen and (min-width:768px) {
+
+}
+@media only screen and (min-width:1024px) {
+
+}
+@media only screen and (min-width:1140px) {
+
+}
+@media only screen and (min-width:1280px) {
+
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+	   only screen and (min-resolution:144dpi) {
+
+}
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+
+.alignnone {
+	margin:5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+	display:block;
+	margin:5px auto 5px auto;
+}
+.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+a img.alignnone {
+	margin:5px 20px 20px 0;
+}
+a img.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wp-caption {
+	background:#FFF;
+	border:1px solid #F0F0F0;
+	max-width:96%;
+	padding:5px 3px 10px;
+	text-align:center;
+}
+.wp-caption.alignnone {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignright {
+	margin:5px 0 20px 20px;
+}
+.wp-caption img {
+	border:0 none;
+	height:auto;
+	margin:0;
+	max-width:98.5%;
+	padding:0;
+	width:auto;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	font-size:11px;
+	line-height:17px;
+	margin:0;
+	padding:0 4px 5px;
+}
+.sticky {
+
+}
+.bypostauthor {
+
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100% !important;
+	}
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
+}
