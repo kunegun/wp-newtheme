@@ -183,12 +183,12 @@ input:focus {
   z-index: 1;
 }
 .imagenFondo {
-  height: 300px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
   background-size: cover;
+  height: 300px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 /* logo */
 .logo {
@@ -225,7 +225,7 @@ input:focus {
   text-transform: uppercase;
 }
 /* Contenido */
-main {
+.page main {
   margin-top: 250px;
 }
 /* sidebar */
@@ -286,6 +286,30 @@ h1 span {
   padding: 0 25px;
   background-color: #fff;
 }
+/** EFECTO POLAROID */
+div.foto {
+  background-color: #fff;
+  display: block;
+  float: left;
+  width: auto;
+  margin: 0 0 27px 30px;
+  padding: 10px 10px 15px 10px;
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+}
+div.foto:nth-child(even) {
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  margin-top: -70px;
+}
+.fotografia {
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+  width: 100%;
+  height: auto;
+}
 .imagen-destacada {
   position: relative;
 }
@@ -302,6 +326,39 @@ h1 span {
 .info-ruta a {
   color: #fff;
   font-size: 2rem;
+}
+.entrada .foto {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.entrada.destacada .foto {
+  -webkit-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+.entrada a {
+  color: #df7900;
+  font-weight: bold;
+}
+.entrada h2 {
+  margin: 0;
+}
+.single-post a {
+  font-weight: bold;
+  color: #df7900;
+}
+.paginacion {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+.paginacion li {
+  float: left;
+  padding: 0 10px;
+}
+.paginacion li a {
+  font-weight: bold;
+  color: #df7900;
 }
 /*------------------------------------*    IMAGES
 \*------------------------------------*/

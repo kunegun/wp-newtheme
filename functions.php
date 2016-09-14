@@ -28,7 +28,10 @@ if (function_exists('add_theme_support'))
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
     add_image_size('slider', 2000, 600, true);
+    add_image_size('mediano', 350,250,true);
     add_image_size('rutaDestacada', 523, 294, true);
+    add_image_size('rutaPrincipal', 751, 422, true);
+    add_image_size('blogPrincipal', 1100, 404, true);
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
@@ -100,6 +103,9 @@ function html5blank_header_scripts()
         wp_register_script('jquery', get_template_directory_uri() . '/js/lib/jquery-1.12.4.min.js', array(), '1.12.4'); // Conditionizr
         wp_enqueue_script('jquery'); // Enqueue it!
 
+        wp_register_script('lightbox', get_template_directory_uri() . '/js/lib/lightbo.min.js', array(), '2.7.1'); // Lightbox
+        wp_enqueue_script('lightbox'); // Enqueue it!
+
         wp_register_script('bxslider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array(), '4.1'); // BXSlider
         wp_enqueue_script('bxslider'); // Enqueue it!
 
@@ -125,6 +131,9 @@ function html5blank_styles()
 
     wp_register_style('bxslidercss', get_template_directory_uri() . '/css/jquery.bxslider.min.css', array(), '1.0', 'all');
     wp_enqueue_style('bxslidercss'); // Enqueue it!
+
+    wp_register_style('lightbox', get_template_directory_uri() . '/css/lightbox.css', array(), '1.0', 'all');
+    wp_enqueue_style('lightbox'); // Enqueue it!
 
     wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
@@ -509,8 +518,8 @@ function slider_posttype()
         ), // Go to Dashboard Custom HTML5 Blank post for supports
         'can_export' => true, // Allows export in Tools > Export
         'taxonomies' => array(
-            'post_tag',
-            'category'
+            // 'post_tag',
+            // 'category'
         ) // Add Category and Post Tags support
     ));
 }

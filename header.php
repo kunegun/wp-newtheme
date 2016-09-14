@@ -31,9 +31,7 @@
 			<header class="header clear" role="banner">
 
 				<div class="navegacion">
-
 						<div class="wrapper">
-
 							<!-- logo -->
 							<div class="logo">
 								<a href="<?php echo home_url(); ?>">
@@ -54,7 +52,6 @@
 								<?php html5blank_nav(); ?>
 							</nav>
 							<!-- /nav -->
-
 						</div> <!--.wrapper -->
 
 				</div><!--.navegacion -->

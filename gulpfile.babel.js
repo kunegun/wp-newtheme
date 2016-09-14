@@ -64,26 +64,6 @@ gulp.task('scripts', () => {
         .pipe(gulp.dest(deployPaths.js));
 });
 
-// Watch files for changes & reload
-// gulp.task('connect-sync', function() {
-//   connect.server({
-//   	port: 7777,
-//   	open: false,
-//   	//stdio: 'ignore',
-//     open: true,
-//   }, function (){
-//     browserSync({
-//     	logLevel: "info",
-//         logPrefix: 'KQS',
-//     	notify: true,
-// 		proxy: '127.0.0.1:7777',
-// 		port: 4444,
-//         open: false,
-// 		browser: 'firefox'
-//     });
-//   });
-// });
-
 gulp.task( 'server', function() {
   browserSync.init({
     // Cambiar el proxy por la ruta que esté escuchando nuestra instalación
