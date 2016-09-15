@@ -6,17 +6,17 @@
 
 				<div class="widgets wrapper clear">
 
-					<div class="columna3">
+					<div class="grid1-4">
 						<h3>Sobre Nosotros</h3>
 					</div>
-					<div class="columna3">
+					<div class="grid1-4">
 						<h3>Próximos Viajes</h3>
 					</div>
-					<div class="columna3">
+					<div class="grid1-4">
 						<h3>Últimos Consejos</h3>
 					</div>
-					<div class="columna3">
-						
+					<div class="grid1-4">
+
 					</div>
 
 				</div>
@@ -27,7 +27,7 @@
 
 				<!-- copyright -->
 				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Derechos reservados <?php bloginfo('name'); ?> 
+					&copy; <?php echo date('Y'); ?> Derechos reservados <?php bloginfo('name'); ?>
 				</p>
 				<!-- /copyright -->
 

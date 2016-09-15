@@ -27,9 +27,9 @@ if (function_exists('add_theme_support'))
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
-    add_image_size('slider', 2000, 600, true);
+    add_image_size('slider', 2000, 700, true);
     add_image_size('mediano', 350,250,true);
-    add_image_size('rutaDestacada', 523, 294, true);
+    add_image_size('rutaDestacada', 705, 391, true);
     add_image_size('rutaPrincipal', 751, 422, true);
     add_image_size('blogPrincipal', 1100, 404, true);
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
@@ -94,22 +94,24 @@ function html5blank_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-    	wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
+        wp_enqueue_script('jquery'); // Enqueue it!
+
+        wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
         wp_enqueue_script('conditionizr'); // Enqueue it!
 
         wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
 
-        wp_register_script('jquery', get_template_directory_uri() . '/js/lib/jquery-1.12.4.min.js', array(), '1.12.4'); // Conditionizr
-        wp_enqueue_script('jquery'); // Enqueue it!
-
-        wp_register_script('lightbox', get_template_directory_uri() . '/js/lib/lightbo.min.js', array(), '2.7.1'); // Lightbox
+        wp_register_script('lightbox', get_template_directory_uri() . '/js/lib/lightbox.min.js', array(), '2.8.2', true); // Lightbox
         wp_enqueue_script('lightbox'); // Enqueue it!
 
-        wp_register_script('bxslider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array(), '4.1'); // BXSlider
+        wp_register_script('bxslider', get_template_directory_uri() . '/js/lib/jquery.bxslider.min.js', array(), '4.1'); // BXSlider
         wp_enqueue_script('bxslider'); // Enqueue it!
 
-        wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
+        wp_register_script('slicknav', get_template_directory_uri() . '/js/lib/jquery.slicknav.min.js', array(), '1.0.7'); // SlickNav
+        wp_enqueue_script('slicknav'); // Enqueue it!
+
+        wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true); // Custom scripts
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
     }
 }
@@ -134,6 +136,9 @@ function html5blank_styles()
 
     wp_register_style('lightbox', get_template_directory_uri() . '/css/lightbox.css', array(), '1.0', 'all');
     wp_enqueue_style('lightbox'); // Enqueue it!
+
+    wp_register_style('slicknav', get_template_directory_uri() . '/css/slicknav.min.css', array(), '1.0', 'all');
+    wp_enqueue_style('slicknav'); // Enqueue it!
 
     wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
@@ -488,41 +493,41 @@ function create_post_type_html5()
     ));
 }
 // Create Slider
-function slider_posttype()
-{
-    register_taxonomy_for_object_type('category', 'html5-blank'); // Register Taxonomies for Category
-    register_taxonomy_for_object_type('post_tag', 'html5-blank');
-    register_post_type('slider', // Register Custom Post Type
-        array(
-        'labels' => array(
-            'name' => __('Slider', 'html5blank'), // Rename these to suit
-            'singular_name' => __('Slider', 'html5blank'),
-            'add_new' => __('Add New', 'html5blank'),
-            'add_new_item' => __('Add New Slider', 'html5blank'),
-            'edit' => __('Edit', 'html5blank'),
-            'edit_item' => __('Edit Slider', 'html5blank'),
-            'new_item' => __('New Slider', 'html5blank'),
-            'view' => __('View Slider', 'html5blank'),
-            'view_item' => __('View Slider', 'html5blank'),
-            'search_items' => __('Search Slider', 'html5blank'),
-            'not_found' => __('No Sliders found', 'html5blank'),
-            'not_found_in_trash' => __('No Sliders found in Trash', 'html5blank')
-        ),
-        'public' => true,
-        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
-        'has_archive' => true,
-        'menu_position' => 6,
-        'supports' => array(
-            'title',
-            'thumbnail'
-        ), // Go to Dashboard Custom HTML5 Blank post for supports
-        'can_export' => true, // Allows export in Tools > Export
-        'taxonomies' => array(
-            // 'post_tag',
-            // 'category'
-        ) // Add Category and Post Tags support
-    ));
-}
+// function slider_posttype()
+// {
+//     register_taxonomy_for_object_type('category', 'html5-blank'); // Register Taxonomies for Category
+//     register_taxonomy_for_object_type('post_tag', 'html5-blank');
+//     register_post_type('slider', // Register Custom Post Type
+//         array(
+//         'labels' => array(
+//             'name' => __('Slider', 'html5blank'), // Rename these to suit
+//             'singular_name' => __('Slider', 'html5blank'),
+//             'add_new' => __('Add New', 'html5blank'),
+//             'add_new_item' => __('Add New Slider', 'html5blank'),
+//             'edit' => __('Edit', 'html5blank'),
+//             'edit_item' => __('Edit Slider', 'html5blank'),
+//             'new_item' => __('New Slider', 'html5blank'),
+//             'view' => __('View Slider', 'html5blank'),
+//             'view_item' => __('View Slider', 'html5blank'),
+//             'search_items' => __('Search Slider', 'html5blank'),
+//             'not_found' => __('No Sliders found', 'html5blank'),
+//             'not_found_in_trash' => __('No Sliders found in Trash', 'html5blank')
+//         ),
+//         'public' => true,
+//         'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+//         'has_archive' => true,
+//         'menu_position' => 6,
+//         'supports' => array(
+//             'title',
+//             'thumbnail'
+//         ), // Go to Dashboard Custom HTML5 Blank post for supports
+//         'can_export' => true, // Allows export in Tools > Export
+//         'taxonomies' => array(
+//             // 'post_tag',
+//             // 'category'
+//         ) // Add Category and Post Tags support
+//     ));
+// }
 
 function themeslug_theme_customizer( $wp_customize ) {
     $wp_customize->add_section( 'themeslug_logo_section' , array(
