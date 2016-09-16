@@ -247,10 +247,23 @@ a,
 .mc-main th {
   background: rgba(126,226,174,0.8);
 }
-.nextmonth {
+.mc-main tr td {
+  padding: 6px !important;
+}
+.mc-main tr td .mc-date {
+  background: none !important;
+}
+.mc-main tr td.nextmonth {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
+}
+.mc-main tr td.current-day .mc-date {
+  background: none !important;
+  color: #d79000 !important;
+}
+.mc-main tr td.has-events .mc-date {
+  color: #f00;
 }
 /*------------------------------------*    MAIN
 \*------------------------------------*/

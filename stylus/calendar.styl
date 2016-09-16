@@ -53,7 +53,21 @@ a,#wp-calendar tfoot td#prev a:hover,#wp-calendar tfoot td#next a:hover
 	color #47C2DC
 
 /* My Calendar */
-.mc-main th
-	background rgba(126, 226, 174, 0.8)
-.nextmonth
-	opacity 0
+.mc-main
+	th
+		background rgba(126, 226, 174, 0.8)
+
+	tr
+		td
+			padding 6px!important
+			.mc-date
+				background none!important
+			&.nextmonth
+				opacity 0
+			&.current-day
+				.mc-date
+					background none!important
+					color #d79000!important
+			&.has-events
+				.mc-date
+					color red
