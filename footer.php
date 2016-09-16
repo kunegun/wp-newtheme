@@ -4,7 +4,7 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
 
-				<div class="widgets wrapper clear">
+				<!-- <div class="widgets wrapper clear">
 
 					<div class="grid1-4">
 						<h3>Sobre Nosotros</h3>
@@ -19,8 +19,7 @@
 
 					</div>
 
-				</div>
-
+				</div> -->
 
 
 				<div class="clear"></div>

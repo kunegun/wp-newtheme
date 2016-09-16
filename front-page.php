@@ -69,10 +69,36 @@
 
 
 		</section>
-		<section class="ultimas-noticias">
+		<section class="ultimas-noticias clear">
 			<div class="grid2-3">
+				<?php $args = array(
+					'post_type' => 'post',
+					'post_per_page' => 3,
+					'order' => DESC,
+					'orderby' => 'date'
+				); ?>
 
+				<?php $ultimas = new WP_Query($args); ?>
+				<?php while($ultimas->have_posts() ): $ultimas->the_post(); ?>
+					<article class="entrada clear">
+						<div class="grid1-3">
+							<div class="foto">
+								<a href="<?php the_permalink(); ?>">
+									<?php the_post_thumbnail('mediano'); ?>
+								</a>
+							</div>
+						</div>
+						<div class="grid2-3">
+							<h2>
+								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+							</h2>
+							<?php html5wp_excerpt('html5wp_custom_post') ?>
+						</div>
+					</article>
+				<?php endwhile; wp_reset_postdata(); ?>
+			</div>
+			<div class="grid1-3">
+				<?php get_sidebar(); ?>
 			</div>
 		</section>
-
 <?php get_footer(); ?>
