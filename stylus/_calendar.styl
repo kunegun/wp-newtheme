@@ -55,8 +55,7 @@ a,#wp-calendar tfoot td#prev a:hover,#wp-calendar tfoot td#next a:hover
 /* My Calendar */
 .mc-main
 	th
-		background rgba(126, 226, 174, 0.8)
-
+		background rgba(naranja 0.8)
 	tr
 		td
 			padding 6px!important
@@ -67,7 +66,24 @@ a,#wp-calendar tfoot td#prev a:hover,#wp-calendar tfoot td#next a:hover
 			&.current-day
 				.mc-date
 					background none!important
-					color #d79000!important
+					color naranja!important
 			&.has-events
 				.mc-date
-					color red
+					color green
+					bottom 0
+	caption
+		background rgba(naranja, 0.8)
+		text-align center
+	.mc_bottomnav
+		background none
+		margin-top -39px
+		padding 0 5px
+		.my-calendar-nav
+			width 100%
+			ul
+				width 100%
+				.my-calendar-prev
+					float left
+				.my-calendar-next
+					float right
+

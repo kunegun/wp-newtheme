@@ -4,23 +4,6 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
 
-				<!-- <div class="widgets wrapper clear">
-
-					<div class="grid1-4">
-						<h3>Sobre Nosotros</h3>
-					</div>
-					<div class="grid1-4">
-						<h3>Próximos Viajes</h3>
-					</div>
-					<div class="grid1-4">
-						<h3>Últimos Consejos</h3>
-					</div>
-					<div class="grid1-4">
-
-					</div>
-
-				</div> -->
-
 
 				<div class="clear"></div>
 
@@ -33,7 +16,7 @@
 			</footer>
 			<!-- /footer -->
 
-
+		</div>
 
 		<?php wp_footer(); ?>
 

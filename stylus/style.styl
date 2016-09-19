@@ -14,8 +14,9 @@
 @import "kouto-swiss"
 normalize()
 @import "_vars.styl"
-@import "calendar.styl"
+@import "_calendar.styl"
 //@import "_helpers.styl"
+box-sizing-reset()
 
 /*------------------------------------*\
     MAIN
@@ -61,6 +62,10 @@ a
 input:focus
 	outline:0
 	border:1px solid #04A4CC
+.animsition-overlay-slide
+	z-index 52
+	background-color naranja
+
 
 /*------------------------------------*\
     STRUCTURE
@@ -101,7 +106,7 @@ input:focus
 /* header */
 .header
 	position relative
-	z-index 100
+	z-index 51
 .navegacion
 	background-color rgba(0,0,0,0.5)
 	position: relative
@@ -110,7 +115,7 @@ input:focus
 @media only screen and (min-width:992px)
 	.navegacion
 		height: 103px
-		margin-top: 15px
+		margin-top: 6px
 
 
 .imagenFondo
@@ -125,8 +130,11 @@ input:focus
 .logo
 	display block
 	margin 0 auto
+	text-align center
 .logo-img
 	width 100%
+	max-width 250px
+	height auto
 
 @media only screen and (min-width: 992px)
 	.logo
@@ -140,8 +148,14 @@ input:focus
 	display none
 .slicknav_btn
 	&.slicknav_open
-		background-color #df7900
+		background-color naranja
 .slicknav_menu
+	background none
+	position absolute
+	z-index 101
+	right 0
+	&.open-slicknav
+		background rgba(0, 0, 0, .75)
 	.slicknav_btn,
 	.slicknav_nav
 		margin-bottom 10px
@@ -150,7 +164,7 @@ input:focus
 			font-size 1.2rem
 			font-weight bold
 			&:hover
-				background-color #df7900
+				background-color naranja
 				color white
 
 @media only screen and (min-width:992px)
@@ -174,7 +188,7 @@ input:focus
 				cursor pointer
 				&.current_page_item,
 				&:hover
-					background-color: #df7900
+					background-color: naranja
 				a
 					font-size:14px
 					font-weight: bold
@@ -191,7 +205,7 @@ input:focus
 /* footer */
 .footer
 	background-color: #323232
-	border-top: 6px solid #df7900
+	border-top: 6px solid naranja
 	padding: 20px 0
 	color: #ffffff
 
@@ -217,16 +231,30 @@ ul.slider
 	li
 		position relative
 		.info-slider
-			background-color rgba(#df7900, 0.6)
-			padding 10px 100px
-			margin-top -100px
+			background-color rgba(naranja, 0.6)
+			padding 0 10%
+			margin-top -30px
 			position absolute
 			z-index: 1
-			height 100px
+			height 40px
+			width 100%
 			a
 				color white!important
+				text-transform none
 			h3
 				margin: 0
+				text-transform uppercase
+			p
+				display none
+@media screen and (min-width:992px)
+	ul.slider
+		li
+			.info-slider
+				padding 10px 100px
+				margin-top -100px
+				height 100px
+				p
+					display block
 .bx-wrapper
 	margin 0 auto
 	.bx-controls-direction a
@@ -293,6 +321,11 @@ div.foto:nth-child(even)
 	a
 		color white
 		font-size 2rem
+.destacados
+	.info-destacado
+		width 100%
+
+
 ////////////////////////// ENTRADAS ////////////////////////////////////////////
 .entrada
 	.foto
@@ -301,7 +334,7 @@ div.foto:nth-child(even)
 		.foto
 			transform rotate(-2deg)
 	a
-		color #df7900
+		color naranja
 		font-weight bold
 	h2
 		margin: 0
@@ -310,7 +343,7 @@ div.foto:nth-child(even)
 .single-post
 	a
 		font-weight bold
-		color #df7900
+		color naranja
 	div.foto
 		transform rotate(0deg)!important
 		margin-top 0
@@ -330,7 +363,7 @@ div.foto:nth-child(even)
 	textarea
 		height 300px
 	.wpcf7-submit
-		background #df7900
+		background naranja
 		box-shadow none
 		text-align center
 		padding 5px 20px
@@ -357,7 +390,7 @@ div.foto:nth-child(even)
 		padding 0 10px
 		a
 			font-weight bold
-			color #df7900
+			color naranja
 
 /*------------------------------------*\
     IMAGES

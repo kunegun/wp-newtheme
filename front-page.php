@@ -25,17 +25,30 @@
 		</ul>
 	</section>
 	<div class="wrapper">
-		<section class="quehacemos">
-			<h1><span>Que hacemos</span></h1>
-			<div class="grid1-3">
-				<h4>Nosotros</h4>
-			</div>
-			<div class="grid1-3">
-				<h4>Rutas</h4>
-			</div>
-			<div class="grid1-3">
-				<h4>Asesoramiento Técnico</h4>
-			</div>
+		<h1><span>Qué hacemos</span></h1>
+		<section class="quehacemos clear">
+			<?php $args = array(
+				'post_type' => 'destacados',
+				'post_per_page' => 3,
+				'order' => 'ASC',
+				'orderby' => 'name'
+			) ?>
+
+			<?php $destacados = new WP_Query($args); ?>
+			<?php while($destacados->have_posts() ):$destacados->the_post(); ?>
+				<article id="post-<?php the_ID();?>" <?php post_class('grid1-3'); ?>>
+					<div class="imagen foto">
+						<?php the_post_thumbnail('iconoDestacado'); ?>
+					</div>
+					<div class="clear"></div>
+					<div class="info-destacado">
+						<h4><?php the_title(); ?></h4>
+						<p><?php the_excerpt(); ?></p>
+					</div>
+					<div class="clear"></div>
+				</article>
+
+			<?php endwhile; wp_reset_postdata(); ?>
 		</section>
 
 		<section class="tours clear">

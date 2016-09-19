@@ -24,12 +24,9 @@
 
 	</head>
 	<body <?php body_class(); ?>>
-
-
-
+			<div class="animsition">
 			<!-- header -->
 			<header class="header clear" role="banner">
-
 				<div class="navegacion clear">
 						<div class="wrapper">
 							<!-- logo -->

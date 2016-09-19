@@ -245,7 +245,7 @@ a,
   color: #47c2dc;
 }
 .mc-main th {
-  background: rgba(126,226,174,0.8);
+  background: rgba(223,121,0,0.8);
 }
 .mc-main tr td {
   padding: 6px !important;
@@ -260,10 +260,40 @@ a,
 }
 .mc-main tr td.current-day .mc-date {
   background: none !important;
-  color: #d79000 !important;
+  color: #df7900 !important;
 }
 .mc-main tr td.has-events .mc-date {
-  color: #f00;
+  color: #62b140;
+  bottom: 0;
+}
+.mc-main caption {
+  background: rgba(223,121,0,0.8);
+  text-align: center;
+}
+.mc-main .mc_bottomnav {
+  background: none;
+  margin-top: -39px;
+  padding: 0 5px;
+}
+.mc-main .mc_bottomnav .my-calendar-nav {
+  width: 100%;
+}
+.mc-main .mc_bottomnav .my-calendar-nav ul {
+  width: 100%;
+}
+.mc-main .mc_bottomnav .my-calendar-nav ul .my-calendar-prev {
+  float: left;
+}
+.mc-main .mc_bottomnav .my-calendar-nav ul .my-calendar-next {
+  float: right;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 /*------------------------------------*    MAIN
 \*------------------------------------*/
@@ -314,6 +344,10 @@ input:focus {
   outline: 0;
   border: 1px solid #04a4cc;
 }
+.animsition-overlay-slide {
+  z-index: 52;
+  background-color: #df7900;
+}
 /*------------------------------------*    STRUCTURE
 \*------------------------------------*/
 /** GRID **/
@@ -357,7 +391,7 @@ input:focus {
 /* header */
 .header {
   position: relative;
-  z-index: 100;
+  z-index: 51;
 }
 .navegacion {
   background-color: rgba(0,0,0,0.5);
@@ -367,7 +401,7 @@ input:focus {
 @media only screen and (min-width: 992px) {
   .navegacion {
     height: 103px;
-    margin-top: 15px;
+    margin-top: 6px;
   }
 }
 .imagenFondo {
@@ -382,9 +416,12 @@ input:focus {
 .logo {
   display: block;
   margin: 0 auto;
+  text-align: center;
 }
 .logo-img {
   width: 100%;
+  max-width: 250px;
+  height: auto;
 }
 @media only screen and (min-width: 992px) {
   .logo {
@@ -398,6 +435,15 @@ input:focus {
 }
 .slicknav_btn.slicknav_open {
   background-color: #df7900;
+}
+.slicknav_menu {
+  background: none;
+  position: absolute;
+  z-index: 101;
+  right: 0;
+}
+.slicknav_menu.open-slicknav {
+  background: rgba(0,0,0,0.75);
 }
 .slicknav_menu .slicknav_btn,
 .slicknav_menu .slicknav_nav {
@@ -482,17 +528,33 @@ ul.slider li {
 }
 ul.slider li .info-slider {
   background-color: rgba(223,121,0,0.6);
-  padding: 10px 100px;
-  margin-top: -100px;
+  padding: 0 10%;
+  margin-top: -30px;
   position: absolute;
   z-index: 1;
-  height: 100px;
+  height: 40px;
+  width: 100%;
 }
 ul.slider li .info-slider a {
   color: #fff !important;
+  text-transform: none;
 }
 ul.slider li .info-slider h3 {
   margin: 0;
+  text-transform: uppercase;
+}
+ul.slider li .info-slider p {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  ul.slider li .info-slider {
+    padding: 10px 100px;
+    margin-top: -100px;
+    height: 100px;
+  }
+  ul.slider li .info-slider p {
+    display: block;
+  }
 }
 .bx-wrapper {
   margin: 0 auto;
@@ -569,6 +631,9 @@ div.foto:nth-child(even) {
 .info-ruta a {
   color: #fff;
   font-size: 2rem;
+}
+.destacados .info-destacado {
+  width: 100%;
 }
 .entrada .foto {
   -webkit-transform: rotate(0deg);
