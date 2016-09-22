@@ -2,21 +2,21 @@
 
 	<main role="main">
 		<!-- section -->
-		<section>
+				<section class="clear">
 
-			<h1><span><?php the_title(); ?></span></h1>
+					<h1><span><?php the_title(); ?></span></h1>
 
-		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+					<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<!-- article -->
+						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				<?php the_content(); ?>
+						<?php the_content(); ?>
 
 
-				<br class="clear">
+					<br class="clear">
 
-				<?php edit_post_link(); ?>
+				<!-- <?php edit_post_link(); ?> -->
 
 			</article>
 			<!-- /article -->
