@@ -132,8 +132,6 @@ function html5blank_conditional_scripts()
 // Load HTML5 Blank styles
 function html5blank_styles()
 {
-    wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
-    wp_enqueue_style('normalize'); // Enqueue it!
 
     wp_register_style('bxslidercss', get_template_directory_uri() . '/css/jquery.bxslider.min.css', array(), '1.0', 'all');
     wp_enqueue_style('bxslidercss'); // Enqueue it!

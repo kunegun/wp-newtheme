@@ -5,6 +5,7 @@ import connect from 'gulp-connect-php';
 import cssnano from 'gulp-cssnano';
 import del from 'del';
 import gulp from 'gulp';
+import gcmq from 'gulp-group-css-media-queries';
 import eslint from 'gulp-eslint';
 import imagemin from 'gulp-imagemin';
 import koutoSwiss from 'kouto-swiss';
@@ -35,6 +36,7 @@ gulp.task('css', () => {
             use: [koutoSwiss(), prefixer()],
             compress: false
         }))
+        .pipe(gcmq())
         //.pipe(cssnano())
         //.pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(deployPaths.css))
