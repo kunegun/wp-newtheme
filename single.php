@@ -23,18 +23,18 @@
 
 
 
-			<div class="grid1-3">
+			<div class="grid1-3 info-single-post">
 				<!-- post details -->
 				<span class="date">Escrito el: <?php the_time('F j, Y'); ?></span><br>
-				<span class="author"><?php _e( 'Publicado por', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-				<p><?php _e( 'Categoría: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
-				<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
+				<span class="author"><?php _e( 'Publicado por', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span><br>
+				<span><?php _e( 'Categoría: ', 'html5blank' ); the_category(', '); // Separated by commas ?></span>
+				<!-- <span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span> -->
 				<!-- /post details -->
 			</div>
 			<div class="grid2-3">
 				<?php the_content(); // Dynamic Content ?>
-				<?php comments_template(); ?>
-				<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
+				<!--?php comments_template(); ?-->
+				<!--?php edit_post_link(); // Always handy to have Edit Post Links available ?-->
 			</div>
 
 

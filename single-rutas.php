@@ -24,26 +24,15 @@
 
 			<div class="informacion-viaje">
 
-					<?php
-						$formato = 'd F, Y';
-						$fecha = strtotime(get_field('fecha_de_salida'));
-						$fechasalida = date_i18n($formato, $fecha);
-
-						$fechaRetorno = strtotime(get_field('fecha_de_retorno'));
-						$fechaRetorno = date_i18n($formato, $fechaRetorno);
-					?>
-
-
-					<p class="fecha">Duración: <span><?php echo $fechasalida; ?> - <?php echo $fechaRetorno; ?></span></p>
+					<p>Track de referencia: <a href="<?php the_field('track'); ?>" target="_blank"><span>Enlace de wikiloc</span></a></p>
 					<p>Lugar de salida: <span><?php the_field('lugar_de_salida'); ?></span></p>
-					<p>Lugares Disponibles: <span><?php the_field('lugares_disponibles'); ?></span></p>
-					<p>Precio: <span><?php the_field('precio'); ?></span></p>
+					<p class="fecha">Duración: <span><?php the_field('duracion'); ?> horas</span></p>
 
 			</div>
 
-			<h2 class="itinerario">Itinerario de Viaje</h2>
+			<h2 class="itinerario">Descripcion de la ruta</h2>
 
-			<?php the_field('itinerario_de_viaje'); ?>
+			<?php the_field('descripcion_de_la_ruta'); ?>
 
 
 
