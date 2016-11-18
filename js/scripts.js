@@ -20,7 +20,7 @@
 
 		lightbox.option({
 			'showImageNumberLabel': false,
-			'wrapAround': false
+			'wrapAround': true
 		});
 
 		// DOM ready, take it away

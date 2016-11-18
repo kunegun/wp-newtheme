@@ -21,7 +21,16 @@
             tests: {}
         });
         </script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+		  ga('create', 'UA-86215224-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
 	</head>
 	<body <?php body_class(); ?>>
 			<div class="animsition">
@@ -30,20 +39,8 @@
 				<div class="navegacion clear">
 						<div class="wrapper">
 							<!-- logo -->
-							<div class="logo">
-								<a href="<?php echo home_url(); ?>">
-									<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-									<?php if ( get_theme_mod( 'themeslug_logo' ) ) : ?>
-									    <div class='site-logo'>
-									        <a class="logo" href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img class="logo-img" src='<?php echo esc_url( get_theme_mod( 'themeslug_logo', 'logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
-									    </div>
-									<?php else : ?>
-										<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-									<?php endif; ?>
-								</a>
-							</div>
+							<a class="logo" href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img class="logo-img" src='<?php echo esc_url( get_theme_mod( 'themeslug_logo', 'logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
 							<!-- /logo -->
-
 							<!-- nav -->
 							<nav class="nav" role="navigation">
 								<?php html5blank_nav(); ?>

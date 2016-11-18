@@ -15,7 +15,7 @@
 			<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1 ?>
 			<?php $args = array(
 				'post_type' => 'post',
-				'posts_per_page' => 2,
+				'posts_per_page' => 5,
 				'orderby' => 'date',
 				'order' => DESC,
 				'paged' => $paged
@@ -34,7 +34,7 @@
 						</a>
 					</div>
 
-					<div class="grid1-3">
+					<div class="grid1-3 info-post">
 						<span class="date">Escrito el: <?php the_time('F j, Y'); ?></span><br>
 						<span class="author"><?php _e( 'Publicado por', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
 						<p><?php _e( 'Categoría: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
