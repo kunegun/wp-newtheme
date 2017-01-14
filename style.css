@@ -485,6 +485,18 @@ h1 span,
   color: #fff;
 }
 
+/*---------------------------------- SOCIAL ----------------------------------*/
+
+.social {
+  list-style: none;
+  margin: 5px 0;
+  padding: 0;
+}
+
+.social li {
+  display: inline-block;
+}
+
 /* Contenido */
 
 .page main {
@@ -607,12 +619,21 @@ h1 span,
 .quehacemos {
   background: rgba(234,234,234,0.5);
   padding: 10px 0;
+<<<<<<< HEAD
 }
 
 .quehacemos .destacados {
   border-bottom: 1px solid #df7900;
 }
 
+=======
+}
+
+.quehacemos .destacados {
+  border-bottom: 1px solid #df7900;
+}
+
+>>>>>>> eb57b1c566e2270f6fb4bd3bec5540a8834b43cc
 .quehacemos .destacados:last-child {
   border: none;
 }
@@ -908,6 +929,13 @@ a img.aligncenter {
     width: 25%;
   }
 
+<<<<<<< HEAD
+=======
+  .social .whatsapp {
+    display: none;
+  }
+
+>>>>>>> eb57b1c566e2270f6fb4bd3bec5540a8834b43cc
   .quehacemos .destacados {
     border: none;
   }

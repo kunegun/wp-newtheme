@@ -30,6 +30,12 @@
 				<span><?php _e( 'Categoría: ', 'html5blank' ); the_category(', '); // Separated by commas ?></span>
 				<!-- <span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span> -->
 				<!-- /post details -->
+				<ul class="social">
+				  <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" onClick="ga('send', 'event', 'social', 'shareFB', '<?php the_permalink(); ?>');" target="_blank"><img src="<?php bloginfo('template_url') ?>/img/social/fb.svg" width="23" height="23" alt="Facebook" title="Facebook" /></a></li>
+				  <!--li><a href="https://twitter.com/home?status=<?php the_title();?> - <?php the_permalink();?>" onClick="ga('send', 'event', 'social', 'shareTW', '<?php the_permalink(); ?>');" target="_blank"><img src="<?php bloginfo('template_url') ?>/_img/_social/tw.svg" width="23" height="23" alt="Twitter" title="Twitter" /></a></li-->
+				  <li><a href="https://twitter.com/intent/tweet?text=<?php echo rawurlencode(the_title('','',false));?> - <?php the_permalink();?>" onClick="ga('send', 'event', 'social', 'shareTW', '<?php the_permalink(); ?>');" target="_blank"><img src="<?php bloginfo('template_url') ?>/img/social/tw.svg" width="23" height="23" alt="Twitter" title="Twitter" /></a></li>
+				  <li class="whatsapp"><a target="_blank" href="whatsapp://send?text=<?php echo rawurlencode(the_title('','',false));?> - <?php the_permalink();?>"><img src="<?php bloginfo('template_url') ?>/img/social/wh.svg" width="23" height="23" alt="Whatsapp" title="Whatsapp" /></a></li>
+				</ul>
 			</div>
 			<div class="grid2-3">
 				<?php the_content(); // Dynamic Content ?>

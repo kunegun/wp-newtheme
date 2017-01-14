@@ -107,7 +107,11 @@
 								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 							</h2>
 						</div>
+<<<<<<< HEAD
 						<div style="display:inline-block">
+=======
+						<div class="texto-ruta">
+>>>>>>> eb57b1c566e2270f6fb4bd3bec5540a8834b43cc
 							<?php html5wp_excerpt('html5wp_custom_post') ?>
 						</div>
 					</article>
