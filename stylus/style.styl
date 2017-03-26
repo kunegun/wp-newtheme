@@ -16,6 +16,7 @@ normalize()
 @import "_vars.styl"
 @import "_calendar.styl"
 //@import "_helpers.styl"
+@import "_fonts.styl"
 box-sizing-reset()
 
 /*------------------------------------*\
@@ -30,6 +31,8 @@ box-sizing-reset()
 	font-smoothing:antialiased
 	text-rendering:optimizeLegibility
 /* html element 62.5% font-size for REM use */
+html
+	//font-size:62.5%
 body
 	font:300 14px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif
 	color:#444
@@ -65,16 +68,9 @@ input:focus
 	background-color naranja
 .texto-destacado
 	font-weight bold
-<<<<<<< HEAD
-
-h1,
-.titular
-	background-image url(img/bg-green.png)
-=======
 h1,
 .titular
 	background-image url('img/bg-green.png')
->>>>>>> eb57b1c566e2270f6fb4bd3bec5540a8834b43cc
 	background-position center center
 	background-repeat repeat-x
 	color #d4771e
@@ -84,10 +80,7 @@ h1,
 	span
 		padding 0 25px
 		background-color #ffffff
-<<<<<<< HEAD
-=======
 
->>>>>>> eb57b1c566e2270f6fb4bd3bec5540a8834b43cc
 /*------------------------------------*\
     STRUCTURE
 \*------------------------------------*/
@@ -129,13 +122,8 @@ h1,
 	position relative
 	z-index 51
 .navegacion
-<<<<<<< HEAD
-	position relative
-	z-index 1
-=======
 	position: relative
 	z-index: 1
->>>>>>> eb57b1c566e2270f6fb4bd3bec5540a8834b43cc
 
 @media only screen and (min-width:992px)
 	.navegacion
@@ -147,11 +135,13 @@ h1,
 .imagenFondo
 	background-size cover
 	background-position center
-	height 300px
+	height 160px
 	left 0
 	position absolute
 	top 0
 	width 100%
+	@media only screen and (min-width mw-m)
+		height 300px
 
 /* logo */
 .logo
@@ -171,10 +161,6 @@ h1,
 			width 100%
 			max-width 220px
 			height auto
-<<<<<<< HEAD
-
-=======
->>>>>>> eb57b1c566e2270f6fb4bd3bec5540a8834b43cc
 
 
 /* nav */
@@ -242,8 +228,13 @@ h1,
 		.whatsapp
 			display none
 /* Contenido */
-.page main
-	margin-top: 200px
+.page
+	main
+		margin-top 100px
+		@media only screen and (min-width mw-m)
+			margin-top 240px
+		@media only screen and (min-width mw-l)
+			margin-top 140px
 
 /* sidebar */
 .sidebar-widget
@@ -252,17 +243,16 @@ h1,
 		font-size 24px
 		font-weight normal
 		text-align center
-<<<<<<< HEAD
-=======
 //.sidebar
->>>>>>> eb57b1c566e2270f6fb4bd3bec5540a8834b43cc
 
 /* footer */
 .footer
 	background-color #323232
 	border-top 6px solid naranja
-	padding 20px 0
 	color #ffffff
+	display flex
+	flex-direction column
+	padding 0
 
 .footer .widgets .columna3
 	float left
@@ -270,28 +260,47 @@ h1,
 .footer p.copyright
 	text-align center
 
+.social-links
+	list-style none
+	flex 0
+	margin 0
+	padding 10px 0
+	text-align center
+	background white
+	li
+		display inline-block
+		margin  0 10px
+		a
+			display block
+			font-size 30px
+			img
+				width 100%
+		&.link-facebook
+			a
+				color color-facebook
+		&.link-instagram
+			a
+				color color-instagram
+		&.link-mail
+			a
+				color naranja
+
+.legal-footer
+	flex  2 0 auto
+
 
 /*------------------------------------*\
     PAGES
 \*------------------------------------*/
 /** PRINCIPAL */
-<<<<<<< HEAD
-=======
 
->>>>>>> eb57b1c566e2270f6fb4bd3bec5540a8834b43cc
 .home-slider
 	margin-top -60px
 	.bx-wrapper,
 	.bx-viewport
-<<<<<<< HEAD
-		border none
-		box-shadow none
-		left 0
-=======
 		border: none
 		box-shadow: none
 		left: 0
->>>>>>> eb57b1c566e2270f6fb4bd3bec5540a8834b43cc
 		overflow visible!important
 	.bx-wrapper
 		margin 0 auto
@@ -302,19 +311,6 @@ h1,
 		.bx-next
 			background-position -43px 10px
 			right 0
-<<<<<<< HEAD
-		.bx-controls-direction
-			a
-				height 84px
-				width 44px
-				transform scale(.5);
-		img
-			width auto!important
-			height auto
-			min-height 200px
-			min-width 100%!important
-			max-width auto!important
-=======
 		.bx-controls-direction a
 			height 84px
 			width 44px
@@ -325,7 +321,6 @@ h1,
 			min-height 200px
 			min-width 100% !important
 			max-width auto !important
->>>>>>> eb57b1c566e2270f6fb4bd3bec5540a8834b43cc
 	.slider
 		margin 0
 		padding 0
@@ -352,11 +347,6 @@ h1,
 		.view-article
 			text-decoration underline
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> eb57b1c566e2270f6fb4bd3bec5540a8834b43cc
 @media only screen and (min-width:992px)
 	.home-slider
 		margin-top -175px
@@ -375,20 +365,11 @@ h1,
 						display block
 						margin 0
 
-<<<<<<< HEAD
-//---------------------------- QUE HACEMOS -----------------------------//
-.quehacemos
-	background rgba(#eaeaea,0.5)
-	padding 10px 0
-	.destacados
-		border-bottom 1px solid naranja
-=======
 .quehacemos
 	background rgba(234,234,234,0.5)
 	padding 10px 0
 	.destacados
 		border-bottom 1px solid #df7900
->>>>>>> eb57b1c566e2270f6fb4bd3bec5540a8834b43cc
 		&:last-child
 			border none
 		.imagen
@@ -406,16 +387,10 @@ h1,
 	.quehacemos
 		.destacados
 			border none
-<<<<<<< HEAD
-			&:after
-				content ""
-				background naranja
-=======
 		.destacados
 			&:after
 				content ""
 				background #df7900
->>>>>>> eb57b1c566e2270f6fb4bd3bec5540a8834b43cc
 				width 1px
 				height 100px
 				position absolute
@@ -428,10 +403,7 @@ h1,
 				transform rotate(0deg)
 				float left
 				max-width 25%
-<<<<<<< HEAD
-=======
 
->>>>>>> eb57b1c566e2270f6fb4bd3bec5540a8834b43cc
 			.info-destacado
 				max-width 75%
 				display inline-block
@@ -439,18 +411,11 @@ h1,
 				h5
 					margin 0 0 10px
 
-<<<<<<< HEAD
-//---------------------- RUTAS DESTACADAS ----------------------------//
 .rutas-destacadas
 	.rutas
 		padding 20px
-=======
-.rutas-destacadas
-	.rutas
-			padding 20px
 
 
->>>>>>> eb57b1c566e2270f6fb4bd3bec5540a8834b43cc
 
 /** EFECTO POLAROID */
 div.foto
@@ -469,15 +434,6 @@ div.foto
 	box-shadow 0 3px 6px rgba(0,0,0,.25)
 	height auto
 	width 100%
-<<<<<<< HEAD
-
-@media only screen and (min-width 992px)
-	margin 0 00 27px 30px
-	padding 10px 10px 15px 10px
-
-
-=======
->>>>>>> eb57b1c566e2270f6fb4bd3bec5540a8834b43cc
 .imagen-destacada
 	position relative
 	.mas-info
@@ -495,10 +451,6 @@ div.foto
 	.info-destacado
 		width 100%
 
-<<<<<<< HEAD
-
-=======
->>>>>>> eb57b1c566e2270f6fb4bd3bec5540a8834b43cc
 
 
 ////////////////////////// ENTRADAS ////////////////////////////////////////////
@@ -512,11 +464,7 @@ div.foto
 		color naranja
 		font-weight bold
 	h2
-<<<<<<< HEAD
-		margin: 0
-=======
 		margin 0
->>>>>>> eb57b1c566e2270f6fb4bd3bec5540a8834b43cc
 		font-size 16px
 		line-height 1.3
 
@@ -528,13 +476,12 @@ div.foto
 	div.foto
 		transform rotate(0deg)!important
 		margin-top 0
-.info-post
-	text-align right
-	padding-right 50px
 
 .info-post
 	text-align right
-	padding-right 50px
+	padding 15px 5px 0 0
+	@media only screen and (min-width mw-m)
+		padding-right 50px
 
 ////////////////////////////// FORMULARIO //////////////////////////////////////
 .wpcf7-form
